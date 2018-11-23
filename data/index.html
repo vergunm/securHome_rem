@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- browser-sync start --server  --files "*.css, *.html,*.js" -->
+<html>
+
+<head>
+    <title>Сторож #0.9</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js" type="text/javascript"></script>
+    <link href="mainStyle.css" rel="stylesheet" type="text/css" />
+    <script src="highcharts.js" type="text/javascript"></script>
+    <script src="mainJs.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="menu">
+            <div class="menu__icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="menu__links">
+                <a class="menu__links-item" href="/">Item 1</a>
+                <a class="menu__links-item" href="/">Item 2</a>
+            </div>
+        </div>
+    </header>
+    <main>
+
+
+        <form id="frmUser" method="GET" action="">
+            <fieldset>
+                <button id="btnOld" class="btnLastNext">
+                    << </button> <button id="btnNext" class="btnLastNext"> >>
+                </button> <br>
+                <legend>Користувач з доступом до будинку</legend>
+                <label for="userId">User ID:</label>
+                <input type="number" name="userId" id="userId" value="0" readonly><br>
+                <label for="userName">Name:</label>
+                <input type="text" name="userName" id="userName" value="xxxxx"><br>
+                <label for="userTel">TEL:</label>
+                 
+                <input type="tel" name="userTel" maxlength="12" id="userTel" value="38----------">
+                <button id="btnDialTel" class="noClick">Перевірити</button> 
+                <br>
+                <label for="userMac">MAC:</label>
+                <input type="text" name="userMac" id="userMac" value="ac:ac:ac:ac:ac:ac">
+                <br><br>
+                <input type="submit" class="noCkick" value="Зберегти!">
+                <input type="reset"  value="Відміна!">
+
+            </fieldset>
+
+        </form>
+        <button id="btnTest">test</button>
+        <div class="status">
+            <b>Статус ситеми:</b><div id="statusText"> Відсутне з"єднання! </div>
+        </div>
+
+        <div class="log"> 
+            <p>
+            <span id="logTxt"> LOG... </span>
+        </p>
+        </div>
+    </main>
+</body>
+
+</html>
