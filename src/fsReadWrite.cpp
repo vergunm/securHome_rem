@@ -5,9 +5,9 @@
 #include <serviceFunc.h>
 
 #define MAX_FILE_SIZE 20000
-#define NN 100  
+//#define NN 100  
 
-
+/*
 struct wiFiConf_t {
     unsigned int id;
     unsigned long time;
@@ -26,15 +26,16 @@ bool structToFile(String fileName, wiFiConf_t *d, unsigned int sizeArr){
  File fileStrim = SPIFFS.open(fileName, "w+");
  if (!fileStrim){ toLog(F("faild o open file to write"));return false;}
     fileStrim.write((const uint8_t *)d, sizeof(*d)*sizeArr);
-    /* тут *d - говорить що потрібно  
-    брати дані на які вказує вказівник
-     а не розмір вказівника */
+    // тут *d - говорить що потрібно  
+    // брати дані на які вказує вказівник
+    //  а не розмір вказівника 
     fileStrim.close();
     String tmsg=F("File: \"");   
     toLog(tmsg+fileName+"\" seved!");
     
 return true;
 };
+
 
 bool structFromFile(String fileName, wiFiConf_t *d,unsigned int sizeArr){
         if (!SPIFFS.exists(fileName)){
@@ -47,6 +48,7 @@ bool structFromFile(String fileName, wiFiConf_t *d,unsigned int sizeArr){
     fileStrim.close();   
 return true;
 };
+*/
 //-----------initFS----------------------
 void initFs(void){
      if (!SPIFFS.begin()) { msg(F("failed to mount FS")); return;};
@@ -119,3 +121,5 @@ msg(String(stObPrt[19].hostName));
 msg(String("time: ")+String(stObPrt[1].time));
 */
 }; 
+
+ 

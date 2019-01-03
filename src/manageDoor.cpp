@@ -6,7 +6,7 @@ const int DOOR_PIN=8;
 //---- doorOpen-----
 void doorOpen () {
   
-pinMode(8, OUTPUT);
+pinMode(DOOR_PIN, OUTPUT);
 }
 //======doorOpen==========
 //---- doorClos-----
