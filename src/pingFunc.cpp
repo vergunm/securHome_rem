@@ -15,7 +15,7 @@ Copyright (c) 2018 Alessio Leoncini
 #include <wiFiFunc.h>
 #include <fsReadWrite.h>
 
-//-------TEMP TIME VAR---
+//-------TEMP TIME VAR----
 unsigned long unixTime=0;
 //------------------------
 byte ipFrom = 2, ipTo = 6;        // діапазон ІР які будуть скануватись
@@ -155,7 +155,7 @@ void chekUsersOnLine()
   msgIn(F("IsUser in home:"));
   msg(String(usrOnLine ? "True" : "False"));
 }
-//-------isTelOfUser---------------
+//-------isTelOfUser HOME USER---------------
 bool isTelOfUser(String tel)
 {
   for (byte i = 0; i < COUNT_USERS; i++)

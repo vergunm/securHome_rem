@@ -85,9 +85,10 @@ bool strToFile(String fileName, String str){
           }
        //
 
- fileStrim = SPIFFS.open(fileName, "a");
+ fileStrim = SPIFFS.open(fileName, "a+");
  if (!fileStrim){ toLog(F("faild o open file to write"));return false;}
-    fileStrim.println(str);   
+    fileStrim.println(str); 
+    delay(10);  
     fileStrim.close();
     msgIn(F("File: ")); msgIn(fileName);msg(F("- saved!"));
 delay(500);
