@@ -31,7 +31,7 @@ void chekUsersOnLine();
 ipMacInspector ipMac1[COUNT_USERS] = {};
 ipMacInspector *ipMacPrt = ipMac1;
 //=============================
-
+//-----
 //--- ADD NEW USER-----
 void addUser(String userName, String mac, String tel)
 {
