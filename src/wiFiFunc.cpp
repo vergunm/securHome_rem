@@ -220,7 +220,7 @@ void initWiFi()
     if (!handleFileRead(uri))
       server.send(404, "text/plain", "FileNotFound");
   });
-  
+   //--
   server.begin();
 
   msgIn(F("Open http://"));
